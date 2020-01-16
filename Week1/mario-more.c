@@ -1,24 +1,42 @@
 #include <cs50.h>
 #include <stdio.h>
 
-//Do Pyramid
+void printblock(int bricks)
+{
+    for(int s=1;s<=bricks;s++)
+        {
+            printf("#");
+        }
+}
+
+void printspace(int count){
+    for(int i=0;i<count;i++)
+    {
+        printf(" "); 
+    }
+             
+}
+
+
 void pyramid(int bricks)
 {
     for(int i=1;i<=bricks;i++)
     {
         for(int s=1;s<=bricks-i;s++)
         {
-            printf(" ");
+            printspace(1);
         }
-        for(int s=1;s<=i;s++)
-        {
-            printf("#");
-        }
+        printblock(i);
+        
+        printspace(2);
+        
+        printblock(i);
+            
         printf("\n");
     }
 }
 
-//Ask For height
+
 void ask_height()
 {
     int size=get_int("Height:");
