@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
+//Print #
 void printblock(int bricks)
 {
     for(int s=1;s<=bricks;s++)
@@ -9,15 +10,15 @@ void printblock(int bricks)
         }
 }
 
+//Print Space
 void printspace(int count){
     for(int i=0;i<count;i++)
     {
         printf(" "); 
-    }
-             
+    }             
 }
 
-
+//Print Bricks
 void pyramid(int bricks)
 {
     for(int i=1;i<=bricks;i++)
@@ -36,7 +37,7 @@ void pyramid(int bricks)
     }
 }
 
-
+//Ask height to user
 void ask_height()
 {
     int size=get_int("Height:");
