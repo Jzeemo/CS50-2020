@@ -54,6 +54,7 @@ int main()
     float L = ((float)letter / (float)word) * 100;
     float S = ((float)sentence / (float)word) * 100;
 
+    // Coleman-Liau index
     float index = 0.0588 * L - 0.296 * S - 15.8;
 
     int grade = roundf(index);
